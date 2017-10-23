@@ -18,35 +18,11 @@
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
 
-extern LCM_DRIVER nt35512_wvga_dsi_vdo_txd_lcm_drv;
-extern LCM_DRIVER otm8018b_wvga_dsi_vdo_dijing_lcm_drv;
-extern LCM_DRIVER otm8019a_wvga_dsi_vdo_dijing_lcm_drv;
-extern LCM_DRIVER hx8369b_wvga_dsi_vdo_tinno_drv;
-extern LCM_DRIVER hx8369b_wvga_dsi_vdo_tinno_txd_drv;
 extern LCM_DRIVER hx8394d_hd720_dsi_vdo_dijing_drv;
 
 
 LCM_DRIVER* lcm_driver_list[] = 
 {
-#if defined(OTM8018B_WVGA_DSI_VDO_DIJING)
-	&otm8018b_wvga_dsi_vdo_dijing_lcm_drv,
-#endif
-
-#if defined(OTM8019A_WVGA_DSI_VDO_DIJING)
-	&otm8019a_wvga_dsi_vdo_dijing_lcm_drv,
-#endif
-  
-#if defined(NT35512_WVGA_DSI_VDO_TXD)
-	&nt35512_wvga_dsi_vdo_txd_lcm_drv,
-#endif
-
-#if defined(HX8369B_WVGA_DSI_VDO_TINNO)
-	&hx8369b_wvga_dsi_vdo_tinno_drv,
-#endif
-
-#if defined(HX8369B_WVGA_DSI_VDO_TINNO_TXD) 
-	&hx8369b_wvga_dsi_vdo_tinno_txd_drv,
-#endif
 
 #if defined(HX8394D_HD720_DSI_VDO_DIJING) 
 	&hx8394d_hd720_dsi_vdo_dijing_drv,
